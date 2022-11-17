@@ -10,18 +10,21 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-class TestDress():
+
+class Test_dress():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
     self.vars = {}
-  
+
   def teardown_method(self, method):
     self.driver.quit()
-  
-  def test_dress(self):
+
+  def test_tEST1(self):
     self.driver.get("http://127.0.0.1:5000/")
-    self.driver.set_window_size(1382, 744)
+    self.driver.set_window_size(1552, 840)
     self.driver.find_element(By.ID, "searchBox").click()
     self.driver.find_element(By.ID, "searchBox").send_keys("dress")
-    self.driver.find_element(By.ID, "searchButton").click()
-  
+    self.driver.find_element(By.ID, "searchBox").send_keys(Keys.ENTER)
+
+    user_name = self.driver.find_element(By.CLASS_NAME, "dropbtn").text
+    assert "Sample" in user_name
