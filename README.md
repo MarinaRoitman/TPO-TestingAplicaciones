@@ -1,4 +1,5 @@
-# TestingAplicaciones--Michi-boys--TPO
+# TPO-TestingAplicaciones
+Trabajo práctico realizado para la materia TESTING DE APLICACIONES
 
 ## Nombre del equipo
 - Michi Boys
